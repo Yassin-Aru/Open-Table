@@ -29,7 +29,7 @@ export default function Home() {
               {/* SEARCH BAR */}
               <div className="text-left text-lg py-3 m-auto flex justify-center">
                 <input
-                  className="rounded  mr-3 p-2 w-[450px] bg-white"
+                  className="rounded  mr-3 p-2 w-[450px] bg-white text-black"
                   type="text"
                   placeholder="State, city or town"
                 />

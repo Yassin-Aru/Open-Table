@@ -1,8 +1,7 @@
-import React from 'react'
 
-function Search() {
+const  Search = () => {
   return (
-    <main className="bg-gray-100 min-h-screen w-screen">
+    <main className="bg-gray-100 min-h-screen w-full">
         <main className="max-w-screen-2xl m-auto bg-white">
             {/* NAVBAR */}
             <nav className="bg-white p-2 flex justify-between">
@@ -12,11 +11,11 @@ function Search() {
             <div>
                 <div className="flex">
                 <button
-                    className="bg-blue-400 text-white border p-1 px-4 rounded mr-3"
+                    className="bg-blue-400 text-white border p-1 px-4 rounded mr-3 font-bold"
                 >
                     Sign in
                 </button>
-                <button className="border p-1 px-4 rounded">Sign up</button>
+                <button className="border p-1 px-4 rounded font-bold text-blue-400">Sign up</button>
                 </div>
             </div>
             </nav>
@@ -24,7 +23,7 @@ function Search() {
             <div className="bg-gradient-to-r to-[#5f6984] from-[#0f1f47] p-2">
             <div className="text-left text-lg py-3 m-auto flex justify-center">
                 <input
-                className="rounded  mr-3 p-2 w-[450px]"
+                className="rounded  mr-3 p-2 w-[450px] bg-white text-black"
                 type="text"
                 placeholder="State, city or town"
                 />
@@ -33,37 +32,37 @@ function Search() {
                 </button>
             </div>
             </div>
-            <div className="flex py-4 m-auto w-2/3 justify-between items-start">
+            <div className="flex py-4 m-auto w-2/3 justify-between items-start text-black">
             {/* SEARCH SIDE BAR */}
             <div className="w-1/5">
                 <div className="border-b pb-4">
                 <h1 className="mb-2">Region</h1>
-                <p className="font-light text-reg">Toronto</p>
-                <p className="font-light text-reg">Ottawa</p>
-                <p className="font-light text-reg">Montreal</p>
-                <p className="font-light text-reg">Hamilton</p>
-                <p className="font-light text-reg">Kingston</p>
-                <p className="font-light text-reg">Niagara</p>
+                <p className="uppercase text-reg">Toronto</p>
+                <p className="uppercase text-reg">Ottawa</p>
+                <p className="uppercase text-reg">Montreal</p>
+                <p className="uppercase text-reg">Hamilton</p>
+                <p className="uppercase text-reg">Kingston</p>
+                <p className="uppercase text-reg">Niagara</p>
                 </div>
                 <div className="border-b pb-4 mt-3">
                 <h1 className="mb-2">Cuisine</h1>
-                <p className="font-light text-reg">Mexican</p>
-                <p className="font-light text-reg">Italian</p>
-                <p className="font-light text-reg">Chinese</p>
+                <p className="uppercase text-reg">Italian</p>
+                <p className="uppercase text-reg">Mexican</p>
+                <p className="uppercase text-reg">Chinese</p>
                 </div>
                 <div className="mt-3 pb-4">
                 <h1 className="mb-2">Price</h1>
                 <div className="flex">
-                    <button className="border w-full text-reg font-light rounded-l p-2">
+                    <button className="border w-full text-reg  rounded-l p-2">
                     $
                     </button>
                     <button
-                    className="border-r border-t border-b w-full text-reg font-light p-2"
+                    className="border-r border-t border-b w-full text-reg  p-2"
                     >
                     $$
                     </button>
                     <button
-                    className="border-r border-t border-b w-full text-reg font-light p-2 rounded-r"
+                    className="border-r border-t border-b w-full text-reg  p-2 rounded-r"
                     >
                     $$$
                     </button>
@@ -86,7 +85,7 @@ function Search() {
                     <p className="ml-2 text-sm">Awesome</p>
                     </div>
                     <div className="mb-9">
-                    <div className="font-light flex text-reg">
+                    <div className=" flex text-reg">
                         <p className="mr-4">$$$</p>
                         <p className="mr-4">Mexican</p>
                         <p className="mr-4">Ottawa</p>
