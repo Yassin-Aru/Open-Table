@@ -2,19 +2,19 @@
 
 export default function Home() {
   return (
-    <main className="bg-gray-100 min-h-screen w-screen">
-      <main className="max-w-screen-2xl m-auto bg-white">
+    <main className="bg-gray-100  w-full">
+      <main className="max-w-full-2xl m-auto bg-white">
         {/* NAVBAR */}
         <nav className="bg-white p-2 flex justify-between">
           <a href="" className="font-bold text-gray-700 text-2xl"> OpenTable </a>
           <div>
             <div className="flex">
               <button
-                className="bg-blue-400 text-white border p-1 px-4 rounded mr-3"
+                className="bg-blue-400 text-white border p-1 px-4 rounded mr-3 font-bold"
               >
                 Sign in
               </button>
-              <button className="border p-1 px-4 rounded">Sign up</button>
+              <button className="border p-1 px-4 rounded text-blue-400 font-bold">Sign up</button>
             </div>
           </div>
         </nav>
@@ -29,7 +29,7 @@ export default function Home() {
               {/* SEARCH BAR */}
               <div className="text-left text-lg py-3 m-auto flex justify-center">
                 <input
-                  className="rounded  mr-3 p-2 w-[450px]"
+                  className="rounded  mr-3 p-2 w-[450px] bg-white"
                   type="text"
                   placeholder="State, city or town"
                 />
@@ -51,7 +51,7 @@ export default function Home() {
                 alt=""
                 className="w-full h-36"
               />
-              <div className="p-1">
+              <div className="p-1 text-black">
                 <h3 className="font-bold text-2xl mb-2">Milestones Grill</h3>
                 <div className="flex items-start">
                   <div className="flex mb-2">*****</div>
