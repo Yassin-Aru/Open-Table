@@ -3,7 +3,7 @@ import Link from "next/link";
 function SearchRestaurantCard() {
   return (
     <div className="border-b flex pb-5">
-      <Link href="/restaurant/ivarus">
+      {/* <Link href="/restaurant/ivarus"> */}
         <img
           src="https://images.otstatic.com/prod1/49153814/2/medium.jpg"
           alt=""
@@ -26,7 +26,7 @@ function SearchRestaurantCard() {
             <a href="">View more information</a>
           </div>
         </div>
-      </Link>
+      {/* </Link> */}
     </div>
   );
 }
