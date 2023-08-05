@@ -21,15 +21,7 @@ const RestaurantDetails = () => {
             <Rating />
             <Description />
             <Images />
-            {/* REVIEWS */}
-            <div>
-              <h1 className="font-bold text-3xl mt-10 mb-7 borber-b pb-5">
-                What 100 people are saying
-              </h1>
-              <div>
-                <Reviews />
-              </div>
-            </div>
+            <Reviews />
             {/* REVIEWS */}
           </div>
           <div className="w-[27%] relative text-reg pb-8">
