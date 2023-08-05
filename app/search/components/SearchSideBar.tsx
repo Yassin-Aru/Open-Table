@@ -1,5 +1,5 @@
 
-function SideBar() {
+function SearchSideBar() {
   return (
     <div className="w-1/5">
       <div className="border-b pb-4">
@@ -33,4 +33,4 @@ function SideBar() {
   );
 }
 
-export default SideBar;
+export default SearchSideBar;

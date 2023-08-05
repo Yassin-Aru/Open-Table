@@ -1,7 +1,6 @@
-import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Header from "./components/Header";
-import SideBar from "./components/SideBar";
+import SearchSideBar from "./components/SearchSideBar";
 
 const Search = () => {
   return (
@@ -11,7 +10,7 @@ const Search = () => {
         {/* SEARCH HEADER */}
         <Header />
         <div className="flex py-4 m-auto w-2/3 justify-between items-start text-black">
-          <SideBar />
+          <SearchSideBar />
           <div className="w-5/6">
             {/* RESAURANT CAR */}
             <div className="border-b flex pb-5">
