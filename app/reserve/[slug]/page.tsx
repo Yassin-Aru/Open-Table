@@ -1,6 +1,6 @@
 const Reservation = () => {
   return (
-    <main className="bg-gray-100 min-h-screen w-screen">
+    <main className="bg-gray-100 min-h-screen w-full">
       <main className="max-w-screen-2xl m-auto bg-white">
         {/* NAVBAR */}
         <nav className="bg-white p-2 flex justify-between">
@@ -10,10 +10,10 @@ const Reservation = () => {
           </a>
           <div>
             <div className="flex">
-              <button className="bg-blue-400 text-white border p-1 px-4 rounded mr-3">
+              <button className="bg-blue-400 text-white border p-1 px-4 rounded mr-3 font-bold ">
                 Sign in
               </button>
-              <button className="border p-1 px-4 rounded">Sign up</button>
+              <button className="border p-1 px-4 rounded font-bold text-blue-400">Sign up</button>
             </div>
           </div>
         </nav>

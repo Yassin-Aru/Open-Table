@@ -104,6 +104,17 @@ a {
   text-decoration: none;
 }
 
+main input{
+  background-color: rgb(240, 240, 240);
+  outline: none;
+}
+
+main select{
+  border: 2px solid black;
+  border-radius: 0.24rem;
+  outline: none;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
