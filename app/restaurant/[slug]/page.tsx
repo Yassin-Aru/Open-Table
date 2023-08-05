@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Images from "./components/Images";
 import Rating from "./components/Rating";
 import RestaurantNavBar from "./components/RestaurantNavBar";
+import Reviews from "./components/Reviews";
 import Title from "./components/Title";
 
 const RestaurantDetails = () => {
@@ -26,9 +27,7 @@ const RestaurantDetails = () => {
                 What 100 people are saying
               </h1>
               <div>
-                {/* REVIEW CARD */}
-                
-                {/* REVIEW CARD */}
+                <Reviews />
               </div>
             </div>
             {/* REVIEWS */}
