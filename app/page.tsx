@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 export default function Home() {
@@ -6,7 +7,7 @@ export default function Home() {
       <main className="max-w-full-2xl m-auto bg-white">
         {/* NAVBAR */}
         <nav className="bg-white p-2 flex justify-between">
-          <a href="" className="font-bold text-gray-700 text-2xl"> OpenTable </a>
+          <Link href="/" className="font-bold text-gray-700 text-2xl"> OpenTable </Link>
           <div>
             <div className="flex">
               <button
