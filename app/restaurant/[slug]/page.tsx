@@ -49,7 +49,7 @@ const RestaurantDetails = async ({ params }: { params: { slug: string } }) => {
         <Title name={restaurant.name}/>
         <Rating />
         <Description description={restaurant.description}/>
-        <Images />
+        <Images images={restaurant.images} />
         <Reviews />
         {/* REVIEWS */}
       </div>
