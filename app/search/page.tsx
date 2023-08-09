@@ -2,7 +2,9 @@ import Header from "./components/Header";
 import SearchRestaurantCard from "./components/SearchRestaurantCard";
 import SearchSideBar from "./components/SearchSideBar";
 
-const Search = () => {
+const Search = ({searchParams}: {searchParams: {city: string}}) => {
+  console.log(searchParams.city);
+  
   return (
     <>
       <Header />
