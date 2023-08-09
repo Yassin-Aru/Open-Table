@@ -1,5 +1,9 @@
 import Header from "./components/Header";
 import RestaurantCard from "./components/RestaurantCard";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
+
 
 export default async function Home() {
   return (
