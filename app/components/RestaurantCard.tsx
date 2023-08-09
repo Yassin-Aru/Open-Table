@@ -12,6 +12,7 @@ function RestaurantCard({restaurant}:Props) {
         <img
           src={restaurant.main_image}
           alt={restaurant.name}
+          title={restaurant.name}
           className="w-full h-36"
         />
         <div className="p-1 text-black">
