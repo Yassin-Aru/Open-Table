@@ -10,10 +10,10 @@ function Navbar() {
       </Link>
       <div>
         <div className="flex">
-          <button className="bg-blue-400 text-white border p-1 px-4 rounded mr-3 font-bold">
+          <button className="bg-blue-400 text-white border p-1 px-4 rounded mr-3 font-reg">
             Sign in
           </button>
-          <button className="border p-1 px-4 rounded text-blue-400 font-bold">
+          <button className="border p-1 px-4 rounded text-blue-400 font-reg">
             Sign up
           </button>
         </div>
