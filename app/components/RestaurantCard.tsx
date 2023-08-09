@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { RestaurantCardType } from "../page";
+import Price from "./Price";
 
 interface Props {
   restaurant: RestaurantCardType;
@@ -21,9 +22,9 @@ function RestaurantCard({restaurant}:Props) {
             <div className="flex mb-2">*****</div>
             <p className="ml-2">77 reviews</p>
           </div>
-          <div className="flex text-reg font-light capitalize">
+          <div className="flex text-reg font-reg capitalize">
             <p className=" mr-3">{restaurant.cuisine.name}</p>
-            <p className="mr-3 font-bold">$$$$</p>
+            <Price price={restaurant.price}/>
             <p>{restaurant.location.name}</p>
           </div>
           <p className="text-sm mt-1 font-bold">Booked 3 times today</p>
