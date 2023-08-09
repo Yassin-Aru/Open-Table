@@ -5,21 +5,29 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 const fetchRestaurant = async () => {
-  const restauratns = await prisma.restaurant.findMany();
+  const restauratns = await prisma.restaurant.findMany({
+    select: {
+      id: true,
+      name: true,
+      main_image: true,
+      cuisine: true,
+      location: true,
+      price: true
+    }
+  });
   return restauratns;
 };
 
 export default async function Home() {
   const restauratns = await fetchRestaurant();
-  
-  console.log({restauratns});
-  
 
   return (
     <main>
       <Header />
       <div className="py-3 px-36 mt-10 flex flex-wrap justify-center">
-        <RestaurantCard />
+        {restauratns.map(() => (
+          <RestaurantCard />
+        ))}
       </div>
     </main>
   );
