@@ -45,7 +45,7 @@ const RestaurantDetails = async ({ params }: { params: { slug: string } }) => {
   return (
     <>
       <div className="bg-white w-[70%] rounded p-3 shadow">
-        <RestaurantNavBar />
+        <RestaurantNavBar slug={restaurant.slug} />
         <Title />
         <Rating />
         <Description />
