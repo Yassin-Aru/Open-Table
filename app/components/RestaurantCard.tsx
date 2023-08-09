@@ -8,7 +8,7 @@ interface Props {
 function RestaurantCard({restaurant}:Props) {
   return (
     <div className="w-64 h-72 m-3 rounded overflow-hidden border cursor-pointer">
-      <Link href="/restaurant/ivarus">
+      <Link href={`/restaurant/${restaurant.slug}`}>
         <img
           src={restaurant.main_image}
           alt={restaurant.name}
@@ -23,7 +23,7 @@ function RestaurantCard({restaurant}:Props) {
           </div>
           <div className="flex text-reg font-light capitalize">
             <p className=" mr-3">{restaurant.cuisine.name}</p>
-            <p className="mr-3">{restaurant.price}</p>
+            <p className="mr-3 font-bold">$$$$</p>
             <p>{restaurant.location.name}</p>
           </div>
           <p className="text-sm mt-1 font-bold">Booked 3 times today</p>
