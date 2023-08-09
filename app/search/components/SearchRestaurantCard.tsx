@@ -1,6 +1,8 @@
 import Link from "next/link";
 
-function SearchRestaurantCard() {
+function SearchRestaurantCard({city}: {city: string}) {
+  console.log({city});
+  
   return (
     <div className="border-b flex pb-5">
       <img
