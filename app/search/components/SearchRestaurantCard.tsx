@@ -8,7 +8,7 @@ interface Props {
 
 function SearchRestaurantCard({ restaurant }: Props) {
   return (
-    <div className="border-b flex pb-5">
+    <div className="border-b flex pb-5 ml-4">
       <img
         src={restaurant.main_image}
         alt={restaurant.name}
