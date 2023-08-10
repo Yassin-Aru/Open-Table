@@ -38,7 +38,7 @@ const Search = async ({ searchParams }: { searchParams: { city: string } }) => {
         <SearchSideBar />
         <div className="w-5/6">
           {restaurants.map((restaurant) => (
-            <SearchRestaurantCard restaurant={restaurant}/>
+            <SearchRestaurantCard key={restaurant.id} restaurant={restaurant}/>
           ))}
         </div>
       </div>
