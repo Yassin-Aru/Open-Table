@@ -12,7 +12,7 @@ function SearchRestaurantCard({ restaurant }: Props) {
       <img
         src={restaurant.main_image}
         alt={restaurant.name}
-        className="w-44 rounded"
+        className="w-64 h-40 rounded"
       />
       <div className="pl-5">
         <h2 className="text-3xl">{restaurant.name}</h2>
