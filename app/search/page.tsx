@@ -29,8 +29,7 @@ const fetchRestaurantByCity = (city: string | undefined) => {
 
 const Search = async ({ searchParams }: { searchParams: { city: string } }) => {
   const restaurants = await fetchRestaurantByCity(searchParams.city.toLowerCase());
-
-  
+    
   return (
     <>
       <Header />
@@ -39,6 +38,7 @@ const Search = async ({ searchParams }: { searchParams: { city: string } }) => {
         <div className="w-5/6">
           {restaurants.length ? (
             restaurants.map((restaurant) => (
+              
               <SearchRestaurantCard key={restaurant.id} restaurant={restaurant}/>
             ))
           ) : (
