@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { RestaurantCardType } from "../../page";
+import Price from "../../components/Price";
 
 interface Props {
   restaurant: RestaurantCardType;
 }
 
-function SearchRestaurantCard({restaurant}: Props) {
-  
+function SearchRestaurantCard({ restaurant }: Props) {
   return (
     <div className="border-b flex pb-5">
       <img
@@ -22,7 +22,7 @@ function SearchRestaurantCard({restaurant}: Props) {
         </div>
         <div className="mb-9">
           <div className=" flex text-reg">
-            <p className="mr-4">$$$</p>
+            <Price price={restaurant.price} />
             <p className="mr-4">{restaurant.cuisine.name}</p>
             <p className="mr-4">{restaurant.location.name}</p>
           </div>
