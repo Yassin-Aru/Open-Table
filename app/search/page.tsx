@@ -31,6 +31,10 @@ const fetchLocations = async () => {
   return prisma.location.findMany();
 }
 
+const fetchCuisine = async () => {
+  return prisma.cuisine.findMany();
+}
+
 const Search = async ({ searchParams }: { searchParams: { city: string } }) => {
   const restaurants = await fetchRestaurantByCity(searchParams.city.toLowerCase());
     
