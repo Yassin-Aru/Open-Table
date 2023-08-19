@@ -1,12 +1,6 @@
-import { RestaurantCardType } from "../../page";
 
 
-interface Props {
-  restaurant: RestaurantCardType;
-}
-
-function SearchSideBar(restaurants: Props) {
-  
+function SearchSideBar() {
   return (
     <div className="w-1/5">
       <div className="border-b pb-4">

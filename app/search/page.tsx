@@ -27,6 +27,10 @@ const fetchRestaurantByCity = (city: string | undefined) => {
   });
 };
 
+const fetchLocations = async () => {
+  return prisma.location.findMany();
+}
+
 const Search = async ({ searchParams }: { searchParams: { city: string } }) => {
   const restaurants = await fetchRestaurantByCity(searchParams.city.toLowerCase());
     
@@ -34,7 +38,7 @@ const Search = async ({ searchParams }: { searchParams: { city: string } }) => {
     <>
       <Header />
       <div className="flex py-4 m-auto w-2/3 justify-between items-start text-black">
-        <SearchSideBar restaurants={restaurants}/>
+        <SearchSideBar />
         <div className="w-5/6">
           {restaurants.length ? (
             restaurants.map((restaurant) => (
