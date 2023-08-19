@@ -11,11 +11,12 @@ function SearchSideBar(restaurants: Props) {
     <div className="w-1/5">
       <div className="border-b pb-4">
         <h1 className="mb-2">Region</h1>
-        {
-          restaurants.map((restaurant) => (
-            <p className="uppercase text-reg" key={restaurant.id}>{restaurant.location.name}</p>
-          ))
-        }
+        <p className="uppercase text-reg">Toronto</p>
+        <p className="uppercase text-reg">Ottawa</p>
+        <p className="uppercase text-reg">Montreal</p>
+        <p className="uppercase text-reg">Hamilton</p>
+        <p className="uppercase text-reg">Kingston</p>
+        <p className="uppercase text-reg">Niagara</p>
       </div>
       <div className="border-b pb-4 mt-3">
         <h1 className="mb-2">Cuisine</h1>
