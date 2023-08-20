@@ -37,12 +37,14 @@ const fetchCuisine = async () => {
 
 const Search = async ({ searchParams }: { searchParams: { city: string } }) => {
   const restaurants = await fetchRestaurantByCity(searchParams.city.toLowerCase());
+  const location = await fetchLocations();
+  const cuisine = await fetchCuisine();
     
   return (
     <>
       <Header />
       <div className="flex py-4 m-auto w-2/3 justify-between items-start text-black">
-        <SearchSideBar />
+        <SearchSideBar location={location} cuisine={cuisine}/>
         <div className="w-5/6">
           {restaurants.length ? (
             restaurants.map((restaurant) => (
