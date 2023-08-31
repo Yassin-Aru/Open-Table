@@ -52,7 +52,7 @@ const Search = async ({ searchParams }: { searchParams: { city: string } }) => {
               <SearchRestaurantCard restaurant={restaurant} key={restaurant.id}/>
             ))
           ) : (
-            <p className="font-reg text-3xl capitalize text-gray-700">Sorry, There is not restauratns in this area!</p>
+            <p className="font-reg text-3xl capitalize text-gray-700">Sorry, There is not restaurants in this area!</p>
           )
           }
         </div>
