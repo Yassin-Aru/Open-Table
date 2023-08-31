@@ -2,7 +2,7 @@ import { Location,Cuisine } from "@prisma/client";
 
 
 
-function SearchSideBar({locations, cuisines}, {locations: Location[], cuisines: Cuisine[]}) {
+function SearchSideBar({locations, cuisines}: {locations: Location[], cuisines: Cuisine[]}) {
   
   return (
     <div className="w-1/5">
