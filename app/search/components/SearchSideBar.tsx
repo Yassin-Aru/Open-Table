@@ -1,4 +1,7 @@
+"use client";
+
 import { Location, Cuisine } from "@prisma/client";
+import { useState } from "react";
 
 function SearchSideBar({
   locations,
@@ -7,16 +10,22 @@ function SearchSideBar({
   locations: Location[];
   cuisines: Cuisine[];
 }) {
+  const [location, setLocation] = useState("");
+  console.log(location)
+
   return (
     <div className="w-1/5">
       <div className="border-b pb-4">
         <h1 className="mb-2">Regions</h1>
         {locations.map((location) => (
-          <p className="uppercase text-reg" key={location.id}>
+          <button className="uppercase text-reg block" key={location.id}
+            onClick={()=> setLocation(location.name)}
+          >
             {location.name}
-          </p>
+          </button>
         ))}
       </div>
+
       <div className="border-b pb-4 mt-3">
         <h1 className="mb-2">Cuisines</h1>
         {cuisines.map((cuisine) => (
