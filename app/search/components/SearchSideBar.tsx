@@ -13,7 +13,7 @@ function SearchSideBar({
         <h1 className="mb-2">Regions</h1>
         {locations.map((location) => (
           <p className="uppercase text-reg" key={location.id}>
-            <link>{location.name}</link>
+            {location.name}
           </p>
         ))}
       </div>
