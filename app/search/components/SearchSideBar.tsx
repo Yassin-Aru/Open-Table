@@ -1,6 +1,7 @@
 "use client";
 
 import { Location, Cuisine } from "@prisma/client";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 function SearchSideBar({
@@ -11,15 +12,21 @@ function SearchSideBar({
   cuisines: Cuisine[];
 }) {
   const [location, setLocation] = useState("");
-  console.log(location)
+  const router = useRouter();
+  console.log(location);
 
   return (
     <div className="w-1/5">
       <div className="border-b pb-4">
         <h1 className="mb-2">Regions</h1>
         {locations.map((location) => (
-          <button className="uppercase text-reg block" key={location.id}
-            onClick={()=> setLocation(location.name)}
+          <button
+            className="uppercase text-reg block"
+            key={location.id}
+            onClick={() => {
+              setLocation(location.name);
+              router.push(`/search?city=${location}`);
+            }}
           >
             {location.name}
           </button>
