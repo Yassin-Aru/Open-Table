@@ -2,10 +2,11 @@ import { PrismaClient } from "@prisma/client";
 import Header from "./components/Header";
 import SearchRestaurantCard from "./components/SearchRestaurantCard";
 import SearchSideBar from "./components/SearchSideBar";
+import { RestaurantCardType } from "../page";
 
 const prisma = new PrismaClient();
 
-const fetchRestaurantByCity = (city: string | undefined) => {
+const fetchRestaurantByCity = async(city: string | undefined) => {
   if (!city) return prisma.restaurant.findMany();
   return prisma.restaurant.findMany({
     where: {
@@ -37,7 +38,7 @@ const fetchCuisine = async () => {
 const Search = async ({ searchParams }: { searchParams: { city: string } }) => {
   const restaurants = await fetchRestaurantByCity(
     searchParams.city.toLowerCase()
-  );
+  ) as RestaurantCardType[];
   const location = await fetchLocations();
   const cuisine = await fetchCuisine();
 

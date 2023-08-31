@@ -23,8 +23,12 @@ function SearchRestaurantCard({ restaurant }: Props) {
         <div className="mb-9">
           <div className=" flex text-reg">
             <Price price={restaurant.price} />
-            <p className="mr-4">{restaurant.cuisine.name}</p>
-            <p className="mr-4">{restaurant.location.name}</p>
+            {restaurant.cuisine && (
+              <p className="mr-4">Cuisine: {restaurant.cuisine.name}</p>
+            )}
+            {restaurant.location && (
+              <p className="mr-4">Location: {restaurant.location.name}</p>
+            )}
           </div>
         </div>
         <div className="text-red-600">
