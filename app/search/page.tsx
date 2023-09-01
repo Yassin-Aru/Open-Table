@@ -1,4 +1,4 @@
-import { PRICE, PrismaClient } from "@prisma/client";
+import { Cuisine, PRICE, PrismaClient } from "@prisma/client";
 import Header from "./components/Header";
 import SearchRestaurantCard from "./components/SearchRestaurantCard";
 import SearchSideBar from "./components/SearchSideBar";
@@ -6,7 +6,7 @@ import { RestaurantCardType } from "../page";
 
 const prisma = new PrismaClient();
 
-const fetchRestaurantByCity = async (city: string | undefined) => {
+const fetchRestaurantByCity = async (city: string | undefined, cuisine?: string) => {
   if (!city) return prisma.restaurant.findMany();
   return prisma.restaurant.findMany({
     where: {
@@ -15,6 +15,11 @@ const fetchRestaurantByCity = async (city: string | undefined) => {
           equals: city,
         },
       },
+      cuisine: {
+        name: {
+          equals: cuisine,
+        }
+      }
     },
     select: {
       id: true,
@@ -41,7 +46,7 @@ const Search = async ({
   searchParams: { city: string; cuisine?: string; price?: PRICE };
 }) => {
   const restaurants = (await fetchRestaurantByCity(
-    searchParams.city.toLowerCase()
+    searchParams.city.toLowerCase(), searchParams.cuisine
   )) as RestaurantCardType[];
   const location = await fetchLocations();
   const cuisine = await fetchCuisine();
