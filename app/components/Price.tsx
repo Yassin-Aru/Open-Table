@@ -17,7 +17,7 @@ export default function Price({ price }: { price: PRICE }) {
         } else {
             return (
                 <>
-                    <span className="text-gray-400">$$$$</span>
+                    <span>$$$$</span>
                 </>
             );
         }
