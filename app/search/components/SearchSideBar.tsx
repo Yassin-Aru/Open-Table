@@ -61,10 +61,10 @@ function SearchSideBar({
                   ...searchParams,
                   price:
                     price === "$"
-                      ? "Cheap"
+                      ? "cheap"
                       : price === "$$"
-                      ? "Regular"
-                      : "High",
+                      ? "regular"
+                      : "high",
                 },
               }}
               className="border w-full text-reg  rounded-l p-2"
