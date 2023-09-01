@@ -1,4 +1,3 @@
-
 import { Location, Cuisine } from "@prisma/client";
 import Link from "next/link";
 
@@ -9,7 +8,6 @@ function SearchSideBar({
   locations: Location[];
   cuisines: Cuisine[];
 }) {
-
   return (
     <div className="w-1/5">
       <div className="border-b pb-4 flex flex-col">
@@ -19,8 +17,8 @@ function SearchSideBar({
             href={{
               pathname: "/search",
               query: {
-                city: location.name
-              }
+                city: location.name,
+              },
             }}
             className="uppercase text-reg"
             key={location.id}
@@ -30,12 +28,21 @@ function SearchSideBar({
         ))}
       </div>
 
-      <div className="border-b pb-4 mt-3">
+      <div className="border-b pb-4 mt-3 flex flex-col">
         <h1 className="mb-2">Cuisines</h1>
         {cuisines.map((cuisine) => (
-          <p className="uppercase text-reg" key={cuisine.id}>
+          <Link
+            href={{
+              pathname: "/search",
+              query: {
+                cuisine: cuisine.name,
+              },
+            }}
+            className="uppercase text-reg"
+            key={cuisine.id}
+          >
             {cuisine.name}
-          </p>
+          </Link>
         ))}
       </div>
       <div className="mt-3 pb-4">
