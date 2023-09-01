@@ -19,6 +19,7 @@ function SearchSideBar({
             href={{
               pathname: "/search",
               query: {
+                ...searchParams,
                 city: location.name,
               },
             }}
@@ -37,6 +38,7 @@ function SearchSideBar({
             href={{
               pathname: "/search",
               query: {
+                ...searchParams,
                 cuisine: cuisine.name,
               },
             }}
