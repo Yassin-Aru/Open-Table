@@ -19,7 +19,7 @@ function SearchSideBar({
             href={{
               pathname: "/search",
               query: {
-                city: `${location}`
+                city: location.name
               }
             }}
             className="uppercase text-reg"
